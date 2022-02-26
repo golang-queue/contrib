@@ -26,6 +26,10 @@ func (l Manager) Fatalf(format string, args ...interface{}) {
 	log.Fatal().Msgf(format, args...)
 }
 
+func (l Manager) Debugf(format string, args ...interface{}) {
+	log.Debug().Msgf(format, args...)
+}
+
 func (l Manager) Info(args ...interface{}) {
 	log.Info().Msg(fmt.Sprint(args...))
 }
@@ -36,4 +40,8 @@ func (l Manager) Error(args ...interface{}) {
 
 func (l Manager) Fatal(args ...interface{}) {
 	log.Fatal().Msg(fmt.Sprint(args...))
+}
+
+func (l Manager) Debug(args ...interface{}) {
+	log.Debug().Msg(fmt.Sprint(args...))
 }
