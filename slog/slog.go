@@ -48,7 +48,6 @@ func (l Manager) Error(args ...interface{}) {
 
 func (l Manager) Fatal(args ...interface{}) {
 	l.logger.ErrorContext(context.Background(), l.addCallerInfo(fmt.Sprint(args...)))
-	os.Exit(1)
 }
 
 func (l Manager) Debug(args ...interface{}) {
