@@ -21,36 +21,36 @@ type Manager struct {
 	logger *slog.Logger
 }
 
-func (l Manager) Infof(format string, args ...interface{}) {
+func (l Manager) Infof(format string, args ...any) {
 	l.logger.InfoContext(context.Background(), l.addCallerInfo(fmt.Sprintf(format, args...)))
 }
 
-func (l Manager) Errorf(format string, args ...interface{}) {
+func (l Manager) Errorf(format string, args ...any) {
 	l.logger.ErrorContext(context.Background(), l.addCallerInfo(fmt.Sprintf(format, args...)))
 }
 
-func (l Manager) Fatalf(format string, args ...interface{}) {
+func (l Manager) Fatalf(format string, args ...any) {
 	l.logger.ErrorContext(context.Background(), l.addCallerInfo(fmt.Sprintf(format, args...)))
 	os.Exit(1)
 }
 
-func (l Manager) Debugf(format string, args ...interface{}) {
+func (l Manager) Debugf(format string, args ...any) {
 	l.logger.DebugContext(context.Background(), l.addCallerInfo(fmt.Sprintf(format, args...)))
 }
 
-func (l Manager) Info(args ...interface{}) {
+func (l Manager) Info(args ...any) {
 	l.logger.InfoContext(context.Background(), l.addCallerInfo(fmt.Sprint(args...)))
 }
 
-func (l Manager) Error(args ...interface{}) {
+func (l Manager) Error(args ...any) {
 	l.logger.ErrorContext(context.Background(), l.addCallerInfo(fmt.Sprint(args...)))
 }
 
-func (l Manager) Fatal(args ...interface{}) {
+func (l Manager) Fatal(args ...any) {
 	l.logger.ErrorContext(context.Background(), l.addCallerInfo(fmt.Sprint(args...)))
 }
 
-func (l Manager) Debug(args ...interface{}) {
+func (l Manager) Debug(args ...any) {
 	l.logger.DebugContext(context.Background(), l.addCallerInfo(fmt.Sprint(args...)))
 }
 
