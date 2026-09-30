@@ -1,6 +1,7 @@
 # contrib
 
 [![Run Tests](https://github.com/golang-queue/contrib/actions/workflows/go.yml/badge.svg)](https://github.com/golang-queue/contrib/actions/workflows/go.yml)
+[![Trivy Security Scan](https://github.com/golang-queue/contrib/actions/workflows/security.yml/badge.svg)](https://github.com/golang-queue/contrib/actions/workflows/security.yml)
 
 ## Logger Interface
 
