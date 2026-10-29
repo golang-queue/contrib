@@ -1,6 +1,6 @@
 module github.com/golang-queue/contrib
 
-go 1.26.8
+go 1.26.10
 
 require github.com/rs/zerolog v1.35.1
 
